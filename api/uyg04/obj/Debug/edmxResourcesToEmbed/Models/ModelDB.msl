@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB03ModelStoreContainer" CdmEntityContainer="DB03Entities">
+    <EntitySetMapping Name="Arac">
+      <EntityTypeMapping TypeName="DB03Model.Arac">
+        <MappingFragment StoreEntitySet="Arac">
+          <ScalarProperty Name="aracFoto" ColumnName="aracFoto" />
+          <ScalarProperty Name="aracId" ColumnName="aracId" />
+          <ScalarProperty Name="aracNo" ColumnName="aracNo" />
+          <ScalarProperty Name="aracAdi" ColumnName="aracAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kategori">
+      <EntityTypeMapping TypeName="DB03Model.Kategori">
+        <MappingFragment StoreEntitySet="Kategori">
+          <ScalarProperty Name="kategoriAdi" ColumnName="kategoriAdi" />
+          <ScalarProperty Name="kategoriNo" ColumnName="kategoriNo" />
+          <ScalarProperty Name="kategoriId" ColumnName="kategoriId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kayit">
+      <EntityTypeMapping TypeName="DB03Model.Kayit">
+        <MappingFragment StoreEntitySet="Kayit">
+          <ScalarProperty Name="kayitId" ColumnName="kayitId" />
+          <ScalarProperty Name="kayitAracId" ColumnName="kayitAracId" />
+          <ScalarProperty Name="kayitKategoriId" ColumnName="kayitKategoriId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

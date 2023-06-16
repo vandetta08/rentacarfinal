@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" class="mat-elevation-z6">
+  <span>Fotoğraf GÜncelle</span>
+</mat-toolbar>
+<div class="container">
+  <div *ngIf="secArac"> 
+    <h3><b>Arac No:</b>{{secArac.aracNo}} <b>Adı</b> {{secArac.aracAdi}}</h3>
+    <img [src]="ApiServis.siteUrl+'/Dosyalar/'+secArac.aracFoto"style="width: 200px;">
+  </div>
+<img [src]="secilenFoto" *ngIf="secilenFoto" style="width:200px;"/>
+<p>&nbsp;</p>
+  <input type="file" hidden="true" onclick="this.value=null" #foto (change)="FotoSec($event) ">
+  <button mat-raised-button color="primary" (click)="foto.click()">Fotoğraf Seç</button>&nbsp;
+  <button mat-raised-button color="primary" (click)="fotoDialogRef.close(aracFoto) ">Kaydet</button>&nbsp;
+  <button mat-raised-button color="Warn" (click)="fotoDialogRef.close() ">Vazgeç</button>
+
+</div>
